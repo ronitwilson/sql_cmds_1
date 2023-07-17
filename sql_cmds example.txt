@@ -1,0 +1,7 @@
+-- Rename the university_shortname column
+ALTER TABLE professors
+RENAME COLUMN university_shortname TO university_id;
+
+-- Try to insert a new professor
+INSERT INTO professors (firstname, lastname, university_id)
+VALUES ('Albert', 'Einstein', 'MIT');
