@@ -27,6 +27,7 @@ RENAME organization TO organization_id;
 ALTER TABLE affiliations
 ADD CONSTRAINT affiliations_organization_fkey FOREIGN KEY (organization_id) REFERENCES organizations (id);
 
+
 -- Have a look at the 10 first rows of affiliations
 SELECT * FROM  affiliations limit 10
 
@@ -37,6 +38,18 @@ UPDATE affiliations
 SET professor_id = professors.id
 FROM professors
 WHERE affiliations.firstname = professors.firstname AND affiliations.lastname = professors.lastname;
+
+
+
+-- Drop the firstname column
+ALTER TABLE affiliations
+DROP column firstname;
+
+-- Drop the lastname column
+ALTER TABLE affiliations
+DROP column lastname;
+
+
 
 
 
