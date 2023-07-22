@@ -50,6 +50,7 @@ ALTER TABLE affiliations
 DROP column lastname;
 
 
-
+--delete 
+DELETE FROM universities WHERE id = 'EPF';
 
 
